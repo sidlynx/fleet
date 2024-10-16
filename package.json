@@ -1,0 +1,18 @@
+{
+  "name": "fleet",
+  "version": "0.0.0",
+  "description": "fleet management software",
+  "repository": "git@github.com:sidlynx/fleet.git",
+  "author": "Mohammed Hamdoune <sidlynx@gmail.com>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.18.0",
+    "pnpm": "9.12.2"
+  },
+  "packageManager": "pnpm@9.12.2",
+  "keywords": [],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
