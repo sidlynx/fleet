@@ -2,7 +2,11 @@
   "name": "spa",
   "private": true,
   "version": "0.0.0",
+  "description": "fleet management software - spa",
+  "author": "Mohammed Hamdoune <sidlynx@gmail.com>",
+  "license": "UNLICENSED",
   "type": "module",
+  "keywords": [],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

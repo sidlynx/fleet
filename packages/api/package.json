@@ -1,9 +1,12 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "api",
   "private": true,
-  "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
-  "license": "MIT",
+  "version": "0.0.0",
+  "description": "fleet management software - api",
+  "author": "Mohammed Hamdoune <sidlynx@gmail.com>",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "keywords": [],
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -17,10 +20,6 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/jest/bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json"
-  },
-  "engines": {
-    "npm": ">=8.0.0",
-    "node": ">=16.0.0"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.2",
@@ -56,21 +55,8 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.3.3"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src",
-    "testRegex": ".*\\.spec\\.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "collectCoverageFrom": [
-      "**/*.(t|j)s"
-    ],
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
   }
 }

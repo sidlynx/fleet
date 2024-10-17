@@ -1,35 +1,31 @@
 {
   "name": "fleet",
+  "private": true,
   "version": "0.0.0",
   "description": "fleet management software",
-  "repository": "git@github.com:sidlynx/fleet.git",
   "author": "Mohammed Hamdoune <sidlynx@gmail.com>",
   "license": "UNLICENSED",
-  "engines": {
-    "node": "^20.18.0",
-    "pnpm": "9.12.2"
-  },
-  "packageManager": "pnpm@9.12.2",
+  "type": "commonjs",
   "keywords": [],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
     "cz": "git-cz"
   },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/cz-commitlint": "^19.5.0",
     "commitizen": "^4.3.1",
+    "@commitlint/types": "^19.5.0",
     "husky": "^9.1.6",
     "inquirer": "9"
   },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
+  "engines": {
+    "node": "^20.18.0",
+    "pnpm": "9.12.2"
   },
-  "dependencies": {
-    "@commitlint/types": "^19.5.0"
-  }
+  "packageManager": "pnpm@9.12.2",
+  "repository": "git@github.com:sidlynx/fleet.git"
 }
