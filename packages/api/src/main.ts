@@ -6,6 +6,10 @@ import { appRouter } from './trpc/router';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  const config = await import("config");
+
+  app.setGlobalPrefix('api');
+
   app.use(
     '/rpc',
     createExpressMiddleware({
@@ -13,8 +17,6 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(3000);
-
-
+  await app.listen(config.get("PORT"));
 }
 bootstrap();

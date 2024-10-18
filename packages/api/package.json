@@ -8,6 +8,7 @@
   "type": "commonjs",
   "keywords": [],
   "scripts": {
+    "dev": "pnpm run start:dev",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -26,8 +27,11 @@
     "@nestjs/core": "^10.4.4",
     "@nestjs/platform-express": "^10.4.4",
     "@trpc/server": "11.0.0-rc.580",
+    "@types/config": "^3.3.5",
+    "config": "^3.3.12",
     "reflect-metadata": "^0.2.1",
     "rxjs": "^7.8.1",
+    "toml": "^3.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

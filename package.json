@@ -10,17 +10,24 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
-    "cz": "git-cz"
+    "cz": "git-cz",
+    "clean": "pnpm run clean-install && pnpm run clean-dist",
+    "clean-install": "npx rimraf --glob ./**/node_modules",
+    "clean-dist": "npx rimraf --glob ./**/dist",
+    "dev": "pnpm run -r dev"
   },
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/cz-commitlint": "^19.5.0",
-    "commitizen": "^4.3.1",
     "@commitlint/types": "^19.5.0",
+    "@types/config": "^3.3.5",
+    "commitizen": "^4.3.1",
+    "config": "^3.3.12",
     "husky": "^9.1.6",
-    "inquirer": "9"
+    "inquirer": "9",
+    "rimraf": "^6.0.1",
+    "toml": "^3.0.0"
   },
   "engines": {
     "node": "^20.18.0",

@@ -1,2 +1,9 @@
 .idea
+
+.pnpm-store
 node_modules
+**/*/package-lock.json
+**/*/yarn.lock
+
+**/config/*
+!**/config/default.toml
