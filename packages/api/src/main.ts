@@ -18,5 +18,9 @@ async function bootstrap() {
   );
 
   await app.listen(config.get("PORT"));
+
+  const appUrl = await app.getUrl();
+
+  console.log(`Application is running on ${appUrl}`);
 }
 bootstrap();

@@ -9,7 +9,7 @@
   "keywords": [],
   "scripts": {
     "dev": "pnpm run start:dev",
-    "build": "nest build",
+    "build": "nest build && cp -r ./config dist/config",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -26,6 +26,7 @@
     "@nestjs/common": "^10.3.2",
     "@nestjs/core": "^10.4.4",
     "@nestjs/platform-express": "^10.4.4",
+    "@nestjs/serve-static": "^4.0.2",
     "@trpc/server": "11.0.0-rc.580",
     "@types/config": "^3.3.5",
     "config": "^3.3.12",
