@@ -18,7 +18,7 @@ export const Route = createRootRoute({
     <>
       <ul>
         <li>
-          <Link to="/">Home</Link> hna {import.meta.env.MODE}
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
