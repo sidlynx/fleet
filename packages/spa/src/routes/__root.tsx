@@ -1,31 +1,6 @@
-import {lazy} from "react";
-import { Outlet, createRootRoute, Link } from '@tanstack/react-router'
-
-const ConditionalTanStackRouterDevtool =
-  import.meta.env.MODE === 'development'
-    ? lazy(() =>
-      // Lazy load in development
-      import('@tanstack/router-devtools').then((res) => ({
-        default: res.TanStackRouterDevtools,
-        // For Embedded Mode
-        // default: res.TanStackRouterDevtoolsPanel
-      })),
-    ) : () => null // Render nothing in production
-
+import {  createRootRoute } from '@tanstack/react-router'
+import {App} from "../App.tsx";
 
 export const Route = createRootRoute({
-  component: () => (
-    <>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-      <Outlet />
-      <ConditionalTanStackRouterDevtool />
-    </>
-  ),
+  component: App
 })
