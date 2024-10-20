@@ -6,7 +6,7 @@ import { appRouter } from './trpc/router';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const config = await import("config");
+  const config = await import('config');
 
   app.setGlobalPrefix('api');
 
@@ -17,7 +17,7 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(config.get("PORT"));
+  await app.listen(config.get('PORT'));
 
   const appUrl = await app.getUrl();
 

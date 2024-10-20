@@ -10,6 +10,8 @@
   "scripts": {
     "dev": "pnpm run -r dev",
     "build": "pnpm run -r build",
+    "lint": "pnpm run -r lint",
+    "lint-fix": "pnpm run -r lint-fix",
     "test": "pnpm run -r test",
     "test-watch": "pnpm run -r test-watch",
     "test-watch-all": "pnpm run -r test-watch-all",
