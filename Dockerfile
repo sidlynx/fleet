@@ -12,7 +12,7 @@ RUN corepack enable \
     && npm i --omit=dev
 
 
-FROM node:bookworm-slim
+FROM node:lts-bookworm-slim
 
 COPY --from=build /home/node/app/packages/api/dist /home/node/app
 COPY --from=build /home/node/app/packages/spa/dist /home/node/app/spa

@@ -1,7 +1,8 @@
 FROM node:lts
 
-ENV PNPM_HOME="/root/.local/share/pnpm"
+ENV PNPM_HOME=/pnpm
 ENV PATH="${PATH}:${PNPM_HOME}"
 
-RUN corepack enable
-RUN pnpm add -g rimraf
+RUN corepack enable  \
+    && pnpm config set store-dir /pnpm/store  \
+    && pnpm add -g rimraf

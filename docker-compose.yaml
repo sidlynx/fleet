@@ -4,10 +4,10 @@ services:
     hostname: fleet_node
     build: ./docker/compose/node
     command: bash -c "tail -f /dev/null"
-    working_dir: /home/node/app
+    working_dir: /app
     restart: always
     volumes:
-      - .:/home/node/app
+      - .:/app
       - ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro
       - ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub:ro
       - ~/.gitconfig:/root/.gitconfig:ro
