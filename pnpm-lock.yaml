@@ -57,8 +57,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.5)(express@4.21.1)
       '@trpc/server':
-        specifier: 11.0.0-rc.580
-        version: 11.0.0-rc.580
+        specifier: ^10.45.2
+        version: 10.45.2
       '@types/config':
         specifier: ^3.3.5
         version: 3.3.5
@@ -126,6 +126,9 @@ importers:
       prettier:
         specifier: ^3.2.5
         version: 3.3.3
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
       source-map-support:
         specifier: ^0.5.21
         version: 0.5.21
@@ -159,6 +162,9 @@ importers:
       '@tanstack/react-router':
         specifier: ^1.71.0
         version: 1.71.0(@tanstack/router-generator@1.69.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@trpc/client':
+        specifier: ^10.45.2
+        version: 10.45.2(@trpc/server@10.45.2)
       config:
         specifier: ^3.3.12
         version: 3.3.12
@@ -181,6 +187,9 @@ importers:
       '@tanstack/router-plugin':
         specifier: ^1.69.1
         version: 1.69.1(vite@5.4.9(@types/node@22.7.5)(terser@5.36.0))(webpack-sources@3.2.3)(webpack@5.94.0(@swc/core@1.7.36))
+      '@trpc/server':
+        specifier: ^10.45.2
+        version: 10.45.2
       '@types/config':
         specifier: ^3.3.5
         version: 3.3.5
@@ -211,6 +220,9 @@ importers:
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
       tailwindcss:
         specifier: ^3.4.14
         version: 3.4.14(ts-node@10.9.2(@swc/core@1.7.36)(@types/node@22.7.5)(typescript@5.6.3))
@@ -1466,8 +1478,13 @@ packages:
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
 
-  '@trpc/server@11.0.0-rc.580':
-    resolution: {integrity: sha512-2XYvKJlfWQqO8m20iWlUWuh/65HTPAo/r/zekCIt/uHGDXuUp7EQPxuyqzjcC8TG70W0Cw5cTZs1OK71E7Hbjg==}
+  '@trpc/client@10.45.2':
+    resolution: {integrity: sha512-ykALM5kYWTLn1zYuUOZ2cPWlVfrXhc18HzBDyRhoPYN0jey4iQHEFSEowfnhg1RvYnrAVjNBgHNeSAXjrDbGwg==}
+    peerDependencies:
+      '@trpc/server': 10.45.2
+
+  '@trpc/server@10.45.2':
+    resolution: {integrity: sha512-wOrSThNNE4HUnuhJG6PfDRp4L2009KDVxsd+2VYH8ro6o/7/jwYZ8Uu5j+VaW+mOmc8EHerHzGcdbGNQSAUPgg==}
 
   '@tsconfig/node10@1.0.11':
     resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
@@ -6023,7 +6040,11 @@ snapshots:
 
   '@tokenizer/token@0.3.0': {}
 
-  '@trpc/server@11.0.0-rc.580': {}
+  '@trpc/client@10.45.2(@trpc/server@10.45.2)':
+    dependencies:
+      '@trpc/server': 10.45.2
+
+  '@trpc/server@10.45.2': {}
 
   '@tsconfig/node10@1.0.11': {}
 

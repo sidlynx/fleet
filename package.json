@@ -15,13 +15,13 @@
     "test": "pnpm run -r test",
     "test-watch": "pnpm run -r test-watch",
     "test-watch-all": "pnpm run -r test-watch-all",
+    "clean": "pnpm run -r clean",
+    "clean-install": "pnpm run -r clean-install && pnpm dlx rimraf node_modules",
+    "clean-build": "pnpm run -r clean-build",
     "----------": "----------",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
-    "cz": "git-cz",
-    "clean": "pnpm run clean-install && pnpm run clean-dist",
-    "clean-install": "npx rimraf --glob ./**/node_modules",
-    "clean-dist": "npx rimraf --glob ./**/dist"
+    "cz": "git-cz"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
