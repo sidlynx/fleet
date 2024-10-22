@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { createExpressMiddleware } from '@trpc/server/adapters/express';
-import { appRouter } from './trpc/router';
+import { appRouter } from 'trpc';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

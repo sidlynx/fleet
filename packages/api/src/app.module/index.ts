@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { join } from 'path';
+import { AppService } from './services/app';
+import { AppController } from './controllers/app';
 
 @Module({
   imports: [

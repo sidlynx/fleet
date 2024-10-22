@@ -40,6 +40,7 @@
     "reflect-metadata": "^0.2.1",
     "rxjs": "^7.8.1",
     "toml": "^3.0.0",
+    "trpc": "workspace:*",
     "zod": "^3.23.8"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { AppController } from './';
+import { AppService } from '../../services/app';
 
 describe('AppController', () => {
   let app: TestingModule;
@@ -12,10 +12,12 @@ describe('AppController', () => {
     }).compile();
   });
 
-  describe('getHello', () => {
-    it('should return "Hello World!"', () => {
+  describe('index', () => {
+    it('should return "state"', () => {
       const appController = app.get(AppController);
-      expect(appController.getHello()).toBe('Hello World!');
+      expect(appController.index()).toEqual({
+        payload: { app: { state: 'COMING_SOON' } },
+      });
     });
   });
 });
