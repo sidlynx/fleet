@@ -12,6 +12,7 @@ module.exports = {
                 "repo",
                 "spa",
                 "api",
+                "trpc"
             ],
         ],
     },
