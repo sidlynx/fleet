@@ -1,7 +1,7 @@
+import { createHTTPServer, } from "@trpc/server/adapters/standalone";
+
 import { createContext, } from "./context";
 import { appRouter, } from "./router";
-
-import { createHTTPServer, } from "@trpc/server/adapters/standalone";
 
 const server = createHTTPServer({
   router: appRouter,

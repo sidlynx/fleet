@@ -1,6 +1,6 @@
-import { t, } from "../t";
-
 import { z, } from "zod";
+
+import { t, } from "../t";
 
 export const greetingRouter = t.router({
   hello: t.procedure

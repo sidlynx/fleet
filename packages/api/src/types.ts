@@ -1,5 +1,5 @@
-export const AppStates = ['COMING_SOON', 'ONLINE', 'MAINTENANCE'] as const;
+export const AppStates = ["COMING_SOON", "ONLINE", "MAINTENANCE",] as const;
 
-export type TApiResponse<TPayload> = {
+export type TApiResponse<TPayload,> = {
   payload: TPayload;
 };

@@ -1,5 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppStates, TApiResponse } from '@/types';
+import type { AppStates, TApiResponse, } from "@/types";
+
+import { Controller, Get, } from "@nestjs/common";
 
 @Controller()
 export class AppController {
@@ -8,7 +9,7 @@ export class AppController {
     return {
       payload: {
         app: {
-          state: 'COMING_SOON',
+          state: "COMING_SOON",
         },
       },
     };
